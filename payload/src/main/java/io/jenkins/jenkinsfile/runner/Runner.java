@@ -118,7 +118,7 @@ public class Runner {
 
         b = f.getStartCondition().get();
 
-        if (!runOptions.noStdout) {
+        if (!runOptions.noBuildLogs) {
           writeLogTo(System.out);
         }
 
