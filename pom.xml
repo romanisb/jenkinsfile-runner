@@ -66,10 +66,10 @@ THE SOFTWARE.
     <gitHubRepo>jenkinsci/jenkinsfile-runner</gitHubRepo>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.level>11</java.level>
-    <jenkins.version>2.375.4</jenkins.version>
-    <jenkins.bom.baseline>bom-2.375.x</jenkins.bom.baseline>
-    <jenkins.bom.version>2025.v816d28f1e04f</jenkins.bom.version>
-    <jetty.version>10.0.12</jetty.version>
+    <jenkins.version>2.387.3</jenkins.version>
+    <jenkins.bom.baseline>bom-2.387.x</jenkins.bom.baseline>
+    <jenkins.bom.version>2102.v854b_fec19c92</jenkins.bom.version>
+    <jetty.version>11.0.15</jetty.version>
     <jenkins-test-harness.version>1952.v3a_b_0cd3f5a_03</jenkins-test-harness.version>
     <!--TODO: Reenable once all the issues are fixed (JENKINS-57353)-->
     <spotbugs.failOnError>false</spotbugs.failOnError>
@@ -207,7 +207,7 @@ THE SOFTWARE.
           <plugin>
             <groupId>org.jacoco</groupId>
             <artifactId>jacoco-maven-plugin</artifactId>
-            <version>0.8.8</version>
+            <version>0.8.9</version>
             <executions>
               <execution>
                 <goals>
