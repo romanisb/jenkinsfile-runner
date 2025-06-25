@@ -132,11 +132,9 @@
         <artifactId>maven-hpi-plugin</artifactId>
         <extensions>true</extensions>
         <configuration>
-          <showDeprecation>true</showDeprecation>
           <webApp>
             <contextPath>/jenkins</contextPath>
           </webApp>
-          <minimumJavaVersion>1.${java.level}</minimumJavaVersion>
           <systemProperties>
             <hudson.Main.development>${hudson.Main.development}</hudson.Main.development>
           </systemProperties>
