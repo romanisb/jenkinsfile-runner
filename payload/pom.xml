@@ -37,7 +37,7 @@
     <dependency>
       <groupId>io.jenkins.plugins</groupId>
       <artifactId>pipeline-as-yaml</artifactId>
-      <version>0.12-rc</version>
+      <version>242.vb_90a_b_f42ca_07</version>
       <optional>true</optional>
       <exclusions>
         <exclusion>
