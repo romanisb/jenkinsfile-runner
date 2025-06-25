@@ -152,8 +152,8 @@ THE SOFTWARE.
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
-        <configuration combine.children="append">
-          <tagNameFormat>@{project.version}</tagNameFormat>
+        <configuration>
+          <tagNameFormat combine.children="append">@{project.version}</tagNameFormat>
         </configuration>
       </plugin>
     </plugins>
