@@ -28,7 +28,7 @@ THE SOFTWARE.
   <parent>
     <groupId>org.jenkins-ci</groupId>
     <artifactId>jenkins</artifactId>
-    <version>1.107</version>
+    <version>1.132</version>
     <relativePath />
   </parent>
 
@@ -66,9 +66,9 @@ THE SOFTWARE.
     <gitHubRepo>jenkinsci/jenkinsfile-runner</gitHubRepo>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.level>11</java.level>
-    <jenkins.version>2.375.4</jenkins.version>
-    <jenkins.bom.baseline>bom-2.375.x</jenkins.bom.baseline>
-    <jenkins.bom.version>2025.v816d28f1e04f</jenkins.bom.version>
+    <jenkins.version>2.462.3</jenkins.version>
+    <jenkins.bom.baseline>bom-2.462.x</jenkins.bom.baseline>
+    <jenkins.bom.version>4228.v0a_71308d905b_</jenkins.bom.version>
     <jetty.version>10.0.12</jetty.version>
     <jenkins-test-harness.version>2140.ve736dc2b_b_d2c</jenkins-test-harness.version>
     <!--TODO: Reenable once all the issues are fixed (JENKINS-57353)-->
@@ -101,14 +101,24 @@ THE SOFTWARE.
       <dependency> <!-- Upper bounds prevention between Pipeline as YAML and JCAsC-->
         <groupId>org.apache.commons</groupId>
         <artifactId>commons-lang3</artifactId>
-        <version>3.12.0</version>
+        <version>3.17.0</version>
+      </dependency>
+      <dependency> <!-- Override the outdated managed dependency -->
+        <groupId>org.ow2.asm</groupId>
+        <artifactId>asm</artifactId>
+        <version>9.7.1</version>
+      </dependency>
+	  <dependency> <!-- Override the outdated managed dependency -->
+        <groupId>com.google.errorprone</groupId>
+        <artifactId>error_prone_annotations</artifactId>
+        <version>2.39.0</version>
       </dependency>
 
       <!-- Plugins -->
       <dependency>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>pipeline-utility-steps</artifactId>
-        <version>2.16.0</version>
+        <version>2.17.0</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

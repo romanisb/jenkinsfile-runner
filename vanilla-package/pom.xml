@@ -73,7 +73,6 @@
     <dependency>
       <groupId>org.jenkins-ci.plugins</groupId>
       <artifactId>job-dsl</artifactId>
-      <version>1.81</version>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins</groupId>
@@ -95,7 +94,7 @@
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-text</artifactId>
-      <version>1.10.0</version>
+      <version>1.12.0</version>
     </dependency>
 
     <!-- Tests -->
@@ -219,8 +218,8 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
-            <configuration combine.self="override">
-              <excludes>
+            <configuration>
+              <excludes combine.self="override">
                 <exclude>**/its/**.java</exclude>
               </excludes>
             </configuration>
