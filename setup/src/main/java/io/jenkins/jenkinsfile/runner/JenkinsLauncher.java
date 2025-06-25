@@ -29,9 +29,11 @@ import org.eclipse.jetty.security.RolePrincipal;
 import org.eclipse.jetty.security.UserPrincipal;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.util.thread.QueuedThreadPool;
-import org.eclipse.jetty.webapp.Configuration;
-import org.eclipse.jetty.webapp.WebAppContext;
-import org.eclipse.jetty.webapp.WebXmlConfiguration;
+
+
+import org.eclipse.jetty.ee8.webapp.Configuration;
+import org.eclipse.jetty.ee8.webapp.WebAppContext;
+import org.eclipse.jetty.ee8.webapp.WebXmlConfiguration;
 
 /**
  * Shared behaviour for different modes of launching an embedded Jenkins in the context of jenkinsfile-runner.
@@ -92,7 +94,7 @@ public abstract class JenkinsLauncher<T extends JenkinsLauncherCommand> extends 
         context.addBean(new NoListenerConfiguration(context));
         server.setHandler(context);
         context.getSecurityHandler().setLoginService(configureUserRealm());
-        context.setResourceBase(launcherOptions.warDir.getPath());
+        context.setBaseResourceAsString(launcherOptions.warDir.getPath());
 
         // Jenkins core and some extension points supply extension points which try to access the filter
         // In Jenkins core it is define in web.xml

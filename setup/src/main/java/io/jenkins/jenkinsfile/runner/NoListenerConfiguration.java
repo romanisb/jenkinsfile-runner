@@ -1,7 +1,7 @@
 package io.jenkins.jenkinsfile.runner;
 
 import org.eclipse.jetty.util.component.AbstractLifeCycle;
-import org.eclipse.jetty.webapp.WebAppContext;
+import org.eclipse.jetty.ee8.webapp.WebAppContext;
 
 import java.util.Collections;
 
