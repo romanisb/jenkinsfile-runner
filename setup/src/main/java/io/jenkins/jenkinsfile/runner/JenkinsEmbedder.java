@@ -685,7 +685,8 @@ public abstract class JenkinsEmbedder implements RootAction {
         } finally {
             jettyLevel(Level.INFO);
         }
-        MIME_TYPES.addMimeMapping("js","application/javascript");
+        // TODO switch off temporarily --> addMimeMapping not possible anymore 
+        // MIME_TYPES.addMimeMapping("js","application/javascript");
         Functions.DEBUG_YUI = true;
 
         try {
