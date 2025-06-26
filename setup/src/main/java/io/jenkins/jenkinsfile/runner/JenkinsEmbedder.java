@@ -73,8 +73,8 @@ import java.util.jar.Manifest;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import edu.umd.cs.findbugs.annotations.CheckForNull;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletContextEvent;
 
 import io.jenkins.jenkinsfile.runner.util.ExecutionEnvironment;
 import io.jenkins.jenkinsfile.runner.util.JenkinsHomeLoader;
@@ -121,7 +121,7 @@ public abstract class JenkinsEmbedder implements RootAction {
     /**
      * Where in the {@link Server} is Jenkins deployed?
      * <p>
-     * Just like {@link javax.servlet.ServletContext#getContextPath()}, starts with '/' but doesn't end with '/'.
+     * Just like {@link jakarta.servlet.ServletContext#getContextPath()}, starts with '/' but doesn't end with '/'.
      */
     @CheckForNull
     protected String contextPath;
@@ -205,9 +205,9 @@ public abstract class JenkinsEmbedder implements RootAction {
         // TODO: set NOOP API
         // jenkins.setCrumbIssuer(new TestCrumbIssuer());
 
-        jenkins.servletContext.setAttribute("app",jenkins);
-        jenkins.servletContext.setAttribute("version","?");
-        WebAppMain.installExpressionFactory(new ServletContextEvent(jenkins.servletContext));
+        jenkins.getServletContext().setAttribute("app",jenkins);
+        jenkins.getServletContext().setAttribute("version","?");
+        WebAppMain.installExpressionFactory(new ServletContextEvent(jenkins.getServletContext()));
 
         // set a default JDK to be the one that the harness is using.
         jenkins.getJDKs().add(new JDK("default",System.getProperty("java.home")));
@@ -369,7 +369,7 @@ public abstract class JenkinsEmbedder implements RootAction {
     }
 
     /**
-     * Prepares a webapp hosting environment to get {@link javax.servlet.ServletContext} implementation
+     * Prepares a webapp hosting environment to get {@link jakarta.servlet.ServletContext} implementation
      * that we need for testing.
      */
     protected abstract ServletContext createWebServer() throws Exception;

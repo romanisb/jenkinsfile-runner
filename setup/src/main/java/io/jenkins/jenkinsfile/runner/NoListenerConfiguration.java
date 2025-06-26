@@ -1,11 +1,11 @@
 package io.jenkins.jenkinsfile.runner;
 
 import org.eclipse.jetty.util.component.AbstractLifeCycle;
-import org.eclipse.jetty.ee8.webapp.WebAppContext;
+import org.eclipse.jetty.ee9.webapp.WebAppContext;
 
 import java.util.Collections;
 
-import javax.servlet.ServletContextListener;
+import jakarta.servlet.ServletContextListener;
 
 /**
  * Kills off {@link ServletContextListener}s loaded from web.xml.

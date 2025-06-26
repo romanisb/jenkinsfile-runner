@@ -40,13 +40,13 @@
     </dependency>
 
     <dependency>
-      <groupId>org.eclipse.jetty.ee8</groupId>
-      <artifactId>jetty-ee8-servlet</artifactId>
+      <groupId>org.eclipse.jetty.ee9</groupId>
+      <artifactId>jetty-ee9-servlet</artifactId>
       <version>${jetty.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.eclipse.jetty.ee8</groupId>
-      <artifactId>jetty-ee8-webapp</artifactId>
+      <groupId>org.eclipse.jetty.ee9</groupId>
+      <artifactId>jetty-ee9-webapp</artifactId>
       <version>${jetty.version}</version>
     </dependency>
     <dependency>
