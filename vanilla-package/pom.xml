@@ -33,16 +33,17 @@
             </goals>
             <configuration>
               <skip>false</skip>
-              <resources>
-                <resource>
-                  <directory>src/test/resources</directory>
-                </resource>
-              </resources>
+              <propertiesEncoding>UTF-8</propertiesEncoding>
             </configuration>
           </execution>
         </executions>
       </plugin>
     </plugins>
+    <resources>
+      <resource>
+        <directory>src/test/resources</directory>
+      </resource>
+    </resources>
   </build>
 
   <dependencies>

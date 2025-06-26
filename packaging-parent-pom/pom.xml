@@ -77,15 +77,16 @@
         <artifactId>maven-resources-plugin</artifactId>
         <configuration>
           <skip>${jfr.packaging.skip}</skip>
-          <resources>
-            <resource>
-              <directory>${project.build.directory}/generated-sources/resources-filtered</directory>
-              <filtering>true</filtering>
-            </resource>
-          </resources>
+          <propertiesEncoding>UTF-8</propertiesEncoding>
         </configuration>
       </plugin>
     </plugins>
+      <resources>
+        <resource>
+          <directory>${project.build.directory}/generated-sources/resources-filtered</directory>
+          <filtering>true</filtering>
+        </resource>
+      </resources>
   </build>
 
   <dependencies>
@@ -134,7 +135,7 @@
       <id>jfr-package-app</id>
       <activation>
         <file>
-          <missing>${project.build.directory}/../parent-pom-marker.txt</missing>
+          <missing>../parent-pom-marker.txt</missing>
         </file>
       </activation>
       <build>
@@ -168,7 +169,7 @@
       <id>jfr-package-assembly</id>
       <activation>
         <file>
-          <missing>${project.build.directory}/../parent-pom-marker.txt</missing>
+          <missing>../parent-pom-marker.txt</missing>
         </file>
       </activation>
       <build>
@@ -176,7 +177,6 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-assembly-plugin</artifactId>
-            <version>3.3.0</version>
             <configuration>
               <skipAssembly>${jfr.packaging.skip.assembly}</skipAssembly>
               <!-- Disabled due to https://github.com/jenkinsci/jenkinsfile-runner/issues/350
@@ -213,7 +213,7 @@
       <id>jfr-package-dependencies</id>
       <activation>
         <file>
-          <missing>${project.build.directory}/../parent-pom-marker.txt</missing>
+          <missing>../parent-pom-marker.txt</missing>
         </file>
       </activation>
       <build>

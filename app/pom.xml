@@ -104,15 +104,16 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
         <configuration>
-          <resources>
-            <resource>
-              <directory>src/main/resources-filtered</directory>
-              <filtering>true</filtering>
-            </resource>
-          </resources>
+          <propertiesEncoding>UTF-8</propertiesEncoding>
         </configuration>
       </plugin>
     </plugins>
+    <resources>
+      <resource>
+        <directory>src/main/resources-filtered</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
   </build>
 
   <dependencies>
