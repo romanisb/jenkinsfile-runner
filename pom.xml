@@ -145,7 +145,7 @@ THE SOFTWARE.
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <release>11</release>
+          <release>${java.level}</release>
         </configuration>
       </plugin>
       <plugin>
@@ -185,10 +185,10 @@ THE SOFTWARE.
   </pluginRepositories>
 
   <scm>
-    <connection>scm:git:git://github.com/${gitHubRepo}.git</connection>
+    <connection>scm:git:https://github.com/${gitHubRepo}.git</connection>
     <developerConnection>scm:git:git@github.com:${gitHubRepo}.git</developerConnection>
     <url>https://github.com/${gitHubRepo}</url>
-    <tag>1.0-beta-32</tag>
+    <tag>1.0-beta-33</tag>
   </scm>
 
   <profiles>
