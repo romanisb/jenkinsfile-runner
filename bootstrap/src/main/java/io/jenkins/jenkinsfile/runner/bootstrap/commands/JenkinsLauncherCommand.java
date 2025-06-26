@@ -194,7 +194,7 @@ public abstract class JenkinsLauncherCommand implements Callable<Integer> {
                 // In this mode we also take Jetty from the Jenkins core
                 .collectJars(new File(getLauncherOptions().warDir, "executable/winstone.jar"))
                 // servlet API needs to be visible to jenkins.war
-                .collectJars(new File(getAppRepo(), "javax/servlet"))
+                .collectJars(new File(getAppRepo(), "jakarta/servlet"))
                 .make());
     }
 

@@ -66,8 +66,8 @@ THE SOFTWARE.
     <gitHubRepo>jenkinsci/jenkinsfile-runner</gitHubRepo>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.level>17</java.level>
-    <jenkins.version>2.462.3</jenkins.version>
-    <jenkins.bom.baseline>bom-2.462.x</jenkins.bom.baseline>
+    <jenkins.version>2.479.3</jenkins.version>
+    <jenkins.bom.baseline>bom-2.479.x</jenkins.bom.baseline>
     <jenkins.bom.version>4228.v0a_71308d905b_</jenkins.bom.version>
     <jetty.version>12.0.12</jetty.version>
     <jenkins-test-harness.version>2140.ve736dc2b_b_d2c</jenkins-test-harness.version>

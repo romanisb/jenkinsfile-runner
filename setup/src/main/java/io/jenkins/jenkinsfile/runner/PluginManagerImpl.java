@@ -2,7 +2,7 @@ package io.jenkins.jenkinsfile.runner;
 
 import hudson.PluginManager;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 import java.io.File;
 import java.util.Collection;
 import java.util.Collections;
