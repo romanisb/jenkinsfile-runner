@@ -677,16 +677,15 @@ public abstract class JenkinsEmbedder implements RootAction {
 
     public static final List<ToolProperty<?>> NO_PROPERTIES = Collections.<ToolProperty<?>>emptyList();
 
-    public static final MimeTypes MIME_TYPES;
+    public static final MimeTypes.Mutable MIME_TYPES;
     static {
         jettyLevel(Level.WARNING); // suppress Log.initialize message
         try {
-            MIME_TYPES = new MimeTypes();
+            MIME_TYPES = new MimeTypes.Mutable();
         } finally {
             jettyLevel(Level.INFO);
         }
-        // TODO switch off temporarily --> addMimeMapping not possible anymore 
-        // MIME_TYPES.addMimeMapping("js","application/javascript");
+        MIME_TYPES.addMimeMapping("js","application/javascript");
         Functions.DEBUG_YUI = true;
 
         try {
