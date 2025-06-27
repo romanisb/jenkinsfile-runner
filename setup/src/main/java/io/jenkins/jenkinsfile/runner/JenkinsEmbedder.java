@@ -686,7 +686,6 @@ public abstract class JenkinsEmbedder implements RootAction {
             jettyLevel(Level.INFO);
         }
         MIME_TYPES.addMimeMapping("js","application/javascript");
-        Functions.DEBUG_YUI = true;
 
         try {
             GNUCLibrary.LIBC.unsetenv("MAVEN_OPTS");
